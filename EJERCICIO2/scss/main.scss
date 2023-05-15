@@ -1,0 +1,120 @@
+$colores: #f2b1b0, #d8e3f0, #e3f0d8, #f0e0d8, #e8d8f0, #d8f0e3;
+
+.modulos {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+
+    thead {
+      background-color: #ccc;
+    }
+
+    tbody {
+      @each $color in $colores {
+        &:nth-child(#{$i}) {
+          background-color: $color;
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+@function calcularAnchura($ancho, $contenedor) {
+  @return ($ancho / $contenedor) * 100%;
+}
+// Definimos los breakpoints que vamos a utilizar
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Definimos la función calcularAnchura()
+@function calcularAnchura($ancho, $contenedor) {
+  @return ($ancho / $contenedor) * 100%;
+}
+
+// Definimos los estilos para el contenedor principal
+.contenedor-principal {
+  max-width: 1200px; // Establecemos un ancho máximo
+  margin: 0 auto; // Centramos el contenedor en la página
+  padding: 1rem; // Añadimos un padding para separar el contenido del borde
+}
+
+// Definimos los estilos para la tabla de módulos
+.modulos-table {
+  width: 100%; // Establecemos el ancho al 100% para que ocupe todo el ancho disponible
+  border-collapse: collapse; // Fusionamos las celdas que no tienen borde
+  th, td {
+    padding: 0.5rem; // Añadimos un padding para separar el contenido del borde
+    border: 1px solid black; // Establecemos un borde de 1px
+  }
+  th {
+    background-color: #ccc; // Establecemos un color de fondo para las celdas de cabecera
+  }
+  // Utilizamos un ciclo for para iterar sobre los elementos de la lista de colores
+  @for $i from 1 through length($colores) {
+    tr:nth-child(#{$i}) {
+      background-color: nth($colores, $i); // Establecemos un color de fondo para la fila correspondiente
+    }
+  }
+}
+
+// Definimos los estilos para las etiquetas h1-h6
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2rem; // Establecemos un tamaño de letra de 2rem para todas las etiquetas
+  // Utilizamos un ciclo for para iterar sobre los elementos de una lista de tamaños de letra
+  @for $i from 1 through length($tamanos) {
+    &:nth-of-type(#{$i}) {
+      font-size: nth($tamanos, $i); // Establecemos un tamaño de letra diferente para cada etiqueta
+    }
+  }
+}
+
+// Utilizamos la función calcularAnchura() para establecer las anchuras en distintos breakpoints
+@media (min-width: map-get($breakpoints, sm)) {
+  .contenedor-principal {
+    width: calcularAnchura(540, map-get($breakpoints, sm)); // Establecemos el ancho en el breakpoint sm
+  }
+}
+
+@media (min-width: map-get($breakpoints, md)) {
+  .contenedor-principal {
+    width: calcularAnchura(720, map-get($breakpoints, md)); // Establecemos el ancho en el breakpoint md
+  }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+  .contenedor-principal {
+    width: calcularAnchura(960, map-get($breakpoints, lg)); // Establecemos el ancho en el breakpoint lg
+  }
+}
