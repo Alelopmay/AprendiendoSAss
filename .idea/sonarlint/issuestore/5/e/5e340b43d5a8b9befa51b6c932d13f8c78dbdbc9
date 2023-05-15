@@ -1,0 +1,22 @@
+
+i	css:S4666Q"TUnexpected duplicate selector ".header .full-name .first-name", first used at line 1(¨Ø“›
+m	css:S4666T"SUnexpected duplicate selector ".header .full-name .last-name", first used at line 4(ô‰ù”ùÿÿÿÿ
+`	css:S4666W"KUnexpected duplicate selector ".header .contact-info", first used at line 7(©Ò¦š
+ 	css:S4666["ŠUnexpected duplicate selector ".header .contact-info .email,
+.header .contact-info .phone", first used at line 11 (no-duplicate-selectors)(Ş§ú
+l	css:S4666_"WUnexpected duplicate selector ".header .contact-info .separator", first used at line 15(‚‰®ó
+Z	css:S4666f"EUnexpected duplicate selector ".header .about", first used at line 22(ÇÍ•‡
+d	css:S4666i"OUnexpected duplicate selector ".header .about .position", first used at line 25(˜ËÓÂ
+^	css:S4666l"DUnexpected duplicate selector ".header .desc", first used at line 28(¶åÿ¼ÿÿÿÿÿ
+Y	css:S4666p"?Unexpected duplicate selector ".section", first used at line 32(Ø•üøıÿÿÿÿ
+`	css:S4666s"FUnexpected duplicate selector ".section__title", first used at line 35(ü“˜éûÿÿÿÿ
+b	css:S4666x"MUnexpected duplicate selector ".section__title::after", first used at line 40(Š™‚è
+`	css:S4666"EUnexpected duplicate selector ".section__list", first used at line 49(Â™ƒ¬ûÿÿÿÿ
+e	css:S4666„"JUnexpected duplicate selector ".section__list-item", first used at line 52(àÁ…ıÿÿÿÿ
+k	css:S4666ˆ"PUnexpected duplicate selector ".section__list-item .left", first used at line 56(å’ê úÿÿÿÿ
+q	css:S4666Œ"VUnexpected duplicate selector ".section__list-item .left .name", first used at line 60(òÈø«øÿÿÿÿ
+°	css:S4666"”Unexpected duplicate selector ".section__list-item .left .addr,
+.section__list-item .left .duration", first used at line 64 (no-duplicate-selectors)(¢¢œ´ûÿÿÿÿ
+l	css:S4666”"QUnexpected duplicate selector ".section__list-item .right", first used at line 68(ª³âøÿÿÿÿ
+m	css:S4666˜"WUnexpected duplicate selector ".section__list-item .right .name", first used at line 72(Ú®µ¡
+r	css:S4666œ"WUnexpected duplicate selector ".section__list-item .right .desc", first used at line 76(™ ˜ûÿÿÿÿ
